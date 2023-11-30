@@ -1,1 +1,46 @@
-<p>movies-list works!</p>
+<div class="d-flex">
+  <p class="ms-auto mb-0">Sort by: </p>
+  <div class="btn-group btn-group-sm ms-2" role="group" aria-label="Basic radio toggle button group">
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btnradio1">Title</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio2">Rel. Date</label>
+  </div>
+
+  <div class="btn-group btn-group-sm mx-2" role="group" aria-label="Basic radio toggle button group">
+    <input type="radio" class="btn-check" name="btnradio2" id="btnradio3" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btnradio3">Asc</label>
+
+    <input type="radio" class="btn-check" name="btnradio2" id="btnradio4" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio4">Desc</label>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-md-8">
+
+    <div class="card m-3 p-3">
+      <div class="row justify-content-center">
+        <div class="col-sm-3 d-flex justify-content-md-end justify-content-center">
+          <img src="assets/img/Avengers.png" class="img-thumbnail rounded-start">
+        </div>
+        <div class="col-sm-9">
+          <div class="card-body">
+            <h3 class="card-title">Avengers</h3>
+            <div class="card-text m-0">Release date: 3 September 2020</div>
+            <div class="card-text m-0 d-flex justify-content">
+              <!-- <span>On my Wishlist</span> -->
+              <p class="position-relative"> <span class="position-absolute top-50 start-100 badge text-bg-success">On my Wishlist</span></p>
+
+              <!-- <button class="btn btn-outline-primary ms-auto">Add</button> -->
+              <button class="btn btn-outline-danger ms-auto">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
