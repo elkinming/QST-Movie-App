@@ -22,12 +22,12 @@
 
     <div *ngFor="let movie of movies" class="card m-3 p-3">
       <div class="row justify-content-center">
-        <div class="col-sm-3 d-flex justify-content-md-end justify-content-center">
-          <img src="assets/img/{{movie.imageName}}" class="img-thumbnail rounded-start">
+        <div class="col-sm-2 d-flex justify-content-md-end justify-content-center">
+          <img src="assets/img/{{movie.imageName}}" class="img-thumbnail rounded-start click-details" (click)="selectMovie(movie)">
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-10">
           <div class="card-body">
-            <h3 class="card-title">{{movie.title}}</h3>
+            <h3 class="card-title click-details" (click)="selectMovie(movie)">{{movie.title}}</h3>
             <div class="card-text m-0">Release date: {{movie.releaseDate}}</div>
             <div class="card-text m-0 d-flex justify-content">
               <p *ngIf="movie.isWishlist" class="position-relative"> <span class="position-absolute top-50 start-100 badge text-bg-success">On my Wishlist</span></p>

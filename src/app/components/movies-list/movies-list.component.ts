@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Order, Sort } from 'src/app/interfaces/enumerations';
 import { Movie } from 'src/app/interfaces/movie.interface';
 import { Wishlist } from 'src/app/interfaces/wishlist';
@@ -20,15 +21,17 @@ export class MoviesListComponent {
 
   constructor(
     private moviesService: MoviesService,
-    private wishlistService: WishlistService
+    private wishlistService: WishlistService,
+    private router: Router
   ){
+    this.moviesService.clearSelectedMovie();
     this.getMovies();
     this.sortBy.valueChanges.subscribe(() => this.getMovies());
     this.order.valueChanges.subscribe(() => this.getMovies());
   }
 
   getMovies(){
-    this.moviesService.getAllMoviesSorted().subscribe({
+    this.moviesService.getAllMovies().subscribe({
       next: (movies: Movie[]) => {
         this.movies = this.sortMovies(movies);
         this.getWishlist();
@@ -100,6 +103,11 @@ export class MoviesListComponent {
     });
     this.wishlistService.setWishlist(this.wishlist);
     movie.isWishlist = false;
+  }
+
+  selectMovie(movie: Movie){
+    this.moviesService.selectMovie(movie);
+    this.router.navigateByUrl('/movie-details')
   }
 
 

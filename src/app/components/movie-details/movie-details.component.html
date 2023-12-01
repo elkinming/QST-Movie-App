@@ -1,1 +1,81 @@
-<p>movie-details works!</p>
+<div class="row justify-content-center">
+  <div class="col-md-12">
+
+    <div class="card m-3 p-3">
+      <div class="row justify-content-center">
+        <div class="col-sm-4 d-flex justify-content-md-end justify-content-center">
+          <img src="assets/img/{{movieSelected.imageName}}" class="img-thumbnail rounded-start click-details">
+        </div>
+        <div class="col-sm-8">
+          <div class="card-body p-0">
+            <h3 class="card-title click-details">{{movieSelected.title}}</h3>
+            <!-- <div class="card-text m-0">Release date: {{movieSelected.releaseDate}}</div> -->
+
+            <ol class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div>
+                  <div class="fw-bold">Release date</div>
+                  {{movieSelected.releaseDate}}
+                </div>
+                <div>
+                  <div class="fw-bold">Rating</div>
+                  {{movieSelected.rating}}
+                </div>
+                <div>
+                  <div class="fw-bold">Duration</div>
+                  {{movieSelected.duration}}
+                </div>
+              </li>
+
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto">
+                  <div class="fw-bold">Genre</div>
+                  {{movieSelected.genre}}
+                </div>
+              </li>
+
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto">
+                  <div class="fw-bold">Description</div>
+                  {{movieSelected.description}}
+                </div>
+              </li>
+
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="">
+                  <div class="fw-bold">Trailer</div>
+                  <div class="video-container">
+
+                    <iframe
+                      [src]="videoURL"
+                      title="video trailer"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen>
+                    </iframe>
+
+                  </div>
+                </div>
+              </li>
+            </ol>
+
+            <div class="card-text m-0 d-flex justify-content">
+              <p *ngIf="movieSelected.isWishlist" class="position-relative"> <span class="position-absolute top-50 start-100 badge text-bg-success">On my Wishlist</span></p>
+              <button *ngIf="!movieSelected.isWishlist" class="btn btn-outline-primary ms-auto" (click)="addToWishlist(movieSelected)">Add</button>
+              <button *ngIf="movieSelected.isWishlist" class="btn btn-outline-danger ms-auto" (click)="removeFromWishlist(movieSelected)">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+
+
+
+

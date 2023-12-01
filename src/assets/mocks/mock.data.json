@@ -7,7 +7,7 @@
     "duration": "2h 30 min",
     "genre": "Sci-Fi",
     "releaseDate": "3 September 2020",
-    "trailerLink": "https://www.youtube.com/watch?v=LdOM0x0XDMo"
+    "trailerLink": "https://www.youtube.com/embed/LdOM0x0XDMo?si=JPk0hl3aYfxzjII-"
   },
   {
     "title":  "Spider-Man: Into the Spider-Verse",
@@ -17,7 +17,7 @@
     "duration": "1h 57min",
     "genre": "Action, Animation, Adventure",
     "releaseDate": "14 December 2018",
-    "trailerLink": "https://www.youtube.com/watch?v=tg52up16eq0"
+    "trailerLink": "https://www.youtube.com/embed/tg52up16eq0?si=0wP271Q7mp8YgF8M"
   },
   {
     "title": "Knives Out",
@@ -27,7 +27,7 @@
     "duration": "2h 10min",
     "genre": "Comedy, Crime, Drama",
     "releaseDate": "27 November 2019",
-    "trailerLink": "https://www.youtube.com/watch?v=qGqiHJTsRkQ"
+    "trailerLink": "https://www.youtube.com/embed/qGqiHJTsRkQ?si=9DCCpKWo38NPQrgu"
   },
   {
     "title": "Guardians of the Galaxy",
@@ -37,7 +37,7 @@
     "duration": "2h 1min",
     "genre": "Action, Adventure, Comedy",
     "releaseDate": "1 August 2014",
-    "trailerLink": "https://www.youtube.com/watch?v=d96cjJhvlMA"
+    "trailerLink": "https://www.youtube.com/embed/d96cjJhvlMA?si=CUm9aZRKsUbYNA4L"
   },
   {
     "title": "Age of Ultron",
@@ -47,6 +47,6 @@
     "duration": "2h 21min",
     "genre": "Action, Adventure, Sci-Fi",
     "releaseDate": "1 May 2015",
-    "trailerLink": "https://www.youtube.com/watch?v=tmeOjFno6Do"
+    "trailerLink": "https://www.youtube.com/embed/tmeOjFno6Do?si=CtB8wdSFifsqbvfL"
   }
 ]

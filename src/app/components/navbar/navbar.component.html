@@ -3,9 +3,9 @@
     <a class="navbar-brand" href="/movies">
       <img src="assets/img/house-door-fill.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
     </a>
-    <h3 class="">Movies List</h3>
+    <h3>{{pageTitle}}</h3>
     <div>
-      <!-- <button class="btn btn-secondary">Back</button> -->
+      <button *ngIf="pageTitle !== 'Movies List'" class="btn btn-secondary" (click)="gotoMoviesList()">Back</button>
     </div>
   </div>
 </nav>
