@@ -7,11 +7,13 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 const routes: Routes = [
   {
     path: 'movies',
-    component: MoviesListComponent
+    component: MoviesListComponent,
+    data: {animation: 'List'}
   },
   {
     path: 'movie-details',
-    component: MovieDetailsComponent
+    component: MovieDetailsComponent,
+    data: {animation: 'Details'}
   },
   {
     path: '',

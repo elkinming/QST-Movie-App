@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { badgeAnimation } from 'src/app/animations/badge.animation';
+import { slideAnimation } from 'src/app/animations/route.animation';
 import { Movie } from 'src/app/interfaces/movie.interface';
 import { Wishlist } from 'src/app/interfaces/wishlist';
 import { MoviesService } from 'src/app/services/movies.service';
@@ -8,7 +10,10 @@ import { WishlistService } from 'src/app/services/wishlist.service';
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
-  styleUrls: ['./movie-details.component.css']
+  styleUrls: ['./movie-details.component.css'],
+  animations:[
+    badgeAnimation
+  ]
 })
 export class MovieDetailsComponent {
 

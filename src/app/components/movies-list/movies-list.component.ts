@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { trigger, state, style, animate, transition } from '@angular/animations';
+
 import { Order, Sort } from 'src/app/interfaces/enumerations';
 import { Movie } from 'src/app/interfaces/movie.interface';
 import { Wishlist } from 'src/app/interfaces/wishlist';
 import { MoviesService } from 'src/app/services/movies.service';
 import { WishlistService } from 'src/app/services/wishlist.service';
+import { badgeAnimation } from 'src/app/animations/badge.animation';
 
 @Component({
   selector: 'app-movies-list',
   templateUrl: './movies-list.component.html',
-  styleUrls: ['./movies-list.component.css']
+  styleUrls: ['./movies-list.component.css'],
+  animations: [
+    badgeAnimation
+  ]
 })
 export class MoviesListComponent {
 
@@ -22,7 +28,7 @@ export class MoviesListComponent {
   constructor(
     private moviesService: MoviesService,
     private wishlistService: WishlistService,
-    private router: Router
+    private router: Router,
   ){
     this.moviesService.clearSelectedMovie();
     this.getMovies();

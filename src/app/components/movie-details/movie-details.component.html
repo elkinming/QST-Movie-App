@@ -60,7 +60,7 @@
             </ol>
 
             <div class="card-text m-0 d-flex justify-content">
-              <p *ngIf="movieSelected.isWishlist" class="position-relative"> <span class="position-absolute top-50 start-100 badge text-bg-success">On my Wishlist</span></p>
+              <p *ngIf="movieSelected.isWishlist" [@inOutAnimation] class="position-relative"> <span class="position-absolute top-50 start-100 badge text-bg-success">On my Wishlist</span></p>
               <button *ngIf="!movieSelected.isWishlist" class="btn btn-outline-primary ms-auto" (click)="addToWishlist(movieSelected)">Add</button>
               <button *ngIf="movieSelected.isWishlist" class="btn btn-outline-danger ms-auto" (click)="removeFromWishlist(movieSelected)">Remove</button>
             </div>
